@@ -1,8 +1,12 @@
 /* reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,700&display=swap');
+
 /* Reset CSS  */
 * { margin:0; padding:0; border:0; outline:0; vertical-align:top;
   -webkit-text-size-adjust:none;  }
-  html{font-family:'고딕'; font-size:16px; color:#fff;}
+  html{font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size:16px; color:#fff;}
   body {}
   article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
   ul, ol, dl { list-style:none; }
@@ -33,6 +37,94 @@
   100%{border-right: 1px solid #fff} 
 }
 
-body{
-    background:#209cee
+body{background:#209cee}
+
+.profile, .pc, .mobile, .responsive, .bootstrap, .wordpress, .vue, .react{display: flex;}
+/* gif 프레임 맞추기 */
+.monitor{
+  position: relative;
+  left:0;
+  top:0;
+  width:30%;
+  height:100%;
+}
+.frame{
+  width:100%;
+}
+.frame_mobile{
+  max-width:100%;
+  max-height:100%;
+}
+.monitor_rec{
+  position: absolute;
+  left:0;
+  top:0;
+  box-sizing: border-box;
+  width:100%;
+  padding: 3.5% 8% 9.5% 9%;
+}
+.monitor_rec_mobile{
+  position: absolute;
+  left:0;
+  top:0;
+  box-sizing: border-box;
+  width:100%;
+  padding: 32% 6.5% 0% 6.5%;
+}
+/* nav */
+nav{
+  position: fixed;
+  z-index: 1000;
+  right:5%;
+  top:50%;
+  transform: translateY(-50%);
+  font-family: 'Roboto', sans-serif;
+}
+nav ul{}
+nav ul li{margin-bottom: 20%;}
+nav ul li a{font-size: 1.25rem; text-align: right; font-weight: 700; transition:all .3s}
+nav ul li a.focus{font-size: 1.75rem; color:#039}
+nav ul li a:hover{color:#039}
+/* main */
+.main{position: relative; left:0; top:0}
+.main .main_text{
+  text-align: center;
+  position: relative;
+  left:50%;
+  top:40%;
+  transform: translate(-50%);
+}
+.main .main_text h3{font-size: 3rem; margin-bottom: 3%; font-style: italic;}
+.main .main_text p{font-size: 1.5rem; margin-bottom: 3%;}
+.scroll_down{font-size: 1.25rem;
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.scroll_down a{transition:color .3s; animation:twink infinite .75s;}
+@keyframes twink {
+  from{
+    color:rgba(255,255,255,.5)
+  }
+  50%{
+    color:rgba(255,255,255,1)
+  }
+  to{
+    color:rgba(255,255,255,.5)
+  }
+}
+/* profile */
+.profile{
+  flex-direction: row-reverse;
+}
+.profile .me{
+  width:40%;
+  height:100%;
+  background: url('../image/me.jpg') no-repeat center center;
+  background-size: cover;
+}
+.profile .intro{
+  width:60%;
+  height:100%;
 }
